@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Europe - Statistics</title>
+  <meta charset="utf-8">
+    
+    
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vega/3.0.8/vega.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vega-lite/2.0.3/vega-lite.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vega-embed/3.0.0-rc7/vega-embed.js"></script>
+    <!-- Dependencies for Vega visualization-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vega/3.0.8/vega.min.js"></script>
+<!-- Dependencies for Vega-lite visualization-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vega-lite/2.0.3/vega-lite.min.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="vega.css" />
+<!-- Vega Tooltip
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vega-tooltip/0.4.4/vega-tooltip.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/vega-tooltip/0.4.4/vega-tooltip.min.css">
+-->
+  <style media="screen">
+    /* Add space between Vega-Embed links  */
+    .vega-actions a {
+      margin-right: 5px;
+    }
+  </style>
+</head>
+<body>
+    <div class="header">
+  <h1>Europe - Statistics</h1>
+    </div>
+    
+    
+<ul class="topnav">
+ <li><a href="vega.html">Story 1</a></li>
+  <li><a href="first.html">Story 2</a></li>
+    
+
+    </ul>
+    
+    <div class="row">
+        <div class="column middle">
+  <!-- Container for the visualization -->
+  <div id="areasq"></div>
+            </div>
+        <div class="column side"> 
+            <h3>
+            For this tutorial, we will create visualizations to explore weather data for Seattle, taken from NOAA. The dataset is a CSV file with columns for the temperature (in Celsius), precipitation (in centimeter), wind (in meter/second), and weather type. We have one row for each day from January 1st, 2012 to December 31st, 2015.
+
+To load the CSV file with Vega-Lite, we need to provide a URL and set the format type in the data section of the specification.
+        </h3>
+        </div>
+
+     <div class="column middle"> 
+    <div id="population"></div>
+        </div>
+       <div class="column side"> 
+            <h3>
+            For this tutorial, we will create visualizations to explore weather data for Seattle, taken from NOAA. The dataset is a CSV file with columns for the temperature (in Celsius), precipitation (in centimeter), wind (in meter/second), and weather type. We have one row for each day from January 1st, 2012 to December 31st, 2015.
+
+To load the CSV file with Vega-Lite, we need to provide a URL and set the format type in the data section of the specification.
+        </h3>
+        </div> 
+       
+        
+    <div class="column m">      
+    <div id="popScatter"></div>
+        </div>
+         <div class="column m2"> 
+            <h3>
+            For this tutorial, we will create visualizations to explore weather data for Seattle, taken from NOAA. The dataset is a CSV file with columns for the temperature (in Celsius), precipitation (in centimeter), wind (in meter/second), and weather type. We have one row for each day from January 1st, 2012 to December 31st, 2015.
+
+To load the CSV file with Vega-Lite, we need to provide a URL and set the format type in the data section of the specification.
+        </h3>
+        </div> 
+       
+        <div class="column middle"> 
+        
+     <div id="popDens"></div> 
+            
+        </div>
+        
+      <div class="column side"> 
+            <h3>
+            For this tutorial, we will create visualizations to explore weather data for Seattle, taken from NOAA. The dataset is a CSV file with columns for the temperature (in Celsius), precipitation (in centimeter), wind (in meter/second), and weather type. We have one row for each day from January 1st, 2012 to December 31st, 2015.
+
+To load the CSV file with Vega-Lite, we need to provide a URL and set the format type in the data section of the specification.
+        </h3>
+        </div>   
+        
+     <div class="column middle">    
+    <div id="GPDaverage"></div> 
+        </div>
+        <div class="column side"> 
+            <h3>
+            For this tutorial, we will create visualizations to explore weather data for Seattle, taken from NOAA. The dataset is a CSV file with columns for the temperature (in Celsius), precipitation (in centimeter), wind (in meter/second), and weather type. We have one row for each day from January 1st, 2012 to December 31st, 2015.
+
+To load the CSV file with Vega-Lite, we need to provide a URL and set the format type in the data section of the specification.
+        </h3>
+        </div> 
+        
+        <div class="column h">  
+      <div id="GDPperPers"></div>
+        </div>
+        
+        <div class="column"> 
+            <h3>
+            For this tutorial, we will create visualizations to explore weather data for Seattle, taken from NOAA. The dataset is a CSV file with columns for the temperature (in Celsius), precipitation (in centimeter), wind (in meter/second), and weather type. We have one row for each day from January 1st, 2012 to December 31st, 2015.
+
+To load the CSV file with Vega-Lite, we need to provide a URL and set the format type in the data section of the specification.
+        </h3>
+        </div> 
+        
+          <div class="column t"> 
+        <div id="popGDPScatter"></div>
+        </div>
+          <div class="column t">
+        
+       <div id="popGDPScatter2"></div>
+        </div>
+         <div class="column"> 
+            <h3>
+            For this tutorial, we will create visualizations to explore weather data for Seattle, taken from NOAA. The dataset is a CSV file with columns for the temperature (in Celsius), precipitation (in centimeter), wind (in meter/second), and weather type. We have one row for each day from January 1st, 2012 to December 31st, 2015.
+
+To load the CSV file with Vega-Lite, we need to provide a URL and set the format type in the data section of the specification.
+        </h3>
+        </div>
+       
+    
+  <script>
+      
+      
+  // POPULATION ACROSS EUROPEAN COUNTRIES - BAR CHART
+  var population = {
+    "$schema": "https://vega.github.io/schema/vega-lite/v2.json",
+      "height": 300,
+       "title": "Population across European countries",
+    "data": {
+      "url": "factbookeu.csv"
+    },
+      "layer": [ {
+    "mark": "bar",
+    "encoding": {
+       // "x": {"field": "Year","type": "temporal", "axis": {"format": "%Y"}}, //"bin": "true",
+        "x": {"field": "Country", "type": "nominal", "sort": {"op": "mean", "field": "Population"}},
+        "y": {"field": "Population", "type": "quantitative",
+          "scale": {"zero": false},
+      
+             },
+    
+        "tooltip": {"field": "Population", "type": "quantitative"},
+    },
+      },
+        
+ {
+      "mark": "rule",
+      "encoding": {
+        "y": {
+          "aggregate": "mean",
+          "field": "Population",
+          "type": "quantitative",
+        },
+        "color": {"value": "red"},
+        "size": {"value": 2},
+     
+      },
+                     },
+              ],
+  };
+      
+  //"transform": [
+    //  {"filter": {"field": "Country", "oneOf":["Ukraine", "Belarus"]}}
+      //   ],
+      
+      
+      
+      // AREA SQ KM EUROPEAN COUNTRIES - BAR CHART
+      var areasq = {
+    "$schema": "https://vega.github.io/schema/vega-lite/v2.json",
+          "height": 300,
+          
+          "title": "Area (sq km) of European countries",
+    "data": {
+      "url": "factbookeu.csv"
+    },
+          "layer": [ {
+   "mark": "bar",
+     
+    "encoding": {
+        //"column": {
+      //"field": "Country", "type": "nominal" },
+       // "x": {"field": "Year","type": "temporal", "axis": {"format": "%Y"}}, //"bin": "true",
+        "x": {"field": "Country", "type": "nominal", "sort": {"op": "mean", "field": "Area_sq_km"}},
+        "y": {"field": "Area_sq_km", "type": "quantitative", "axis": {
+            "grid": true
+          },
+          "scale": {"zero": false},
+             
+             },
+        "tooltip": {"field": "Area_sq_km", "type": "quantitative"}
+        // "color": {
+     // "field": "Country", "type": "nominal"}
+    
+   
+},
+          },
+                     {
+      "mark": "rule",
+      "encoding": {
+        "y": {
+          "aggregate": "mean",
+          "field": "Area_sq_km",
+          "type": "quantitative",
+        },
+        "color": {"value": "red"},
+        "size": {"value": 2},
+     
+      },
+                     },
+                    
+              ],
+  };
+      
+      
+      
+// POPULATION OF LARGEST COUNTRIES VS AREA - SCATTERPLOT
+        var popScatter = {
+             "title": "Largest countries Area vs Population Scatterplot",
+    "$schema": "https://vega.github.io/schema/vega-lite/v2.json",
+            "width": 500,
+            "height": 300,
+    "data": {
+      "url": "factbookeu.csv"
+    },
+            "transform": [
+      {"filter": "datum.Area_sq_km > 200000"}
+         ],
+      "layer": [ {
+      "mark": {"type": "point", "filled": true},
+  "encoding": {
+    "x": {"field": "Area_sq_km", "type": "quantitative"},
+    "y": {"field": "Population", "type": "quantitative"},
+    "color": {"field": "Country", "type": "nominal", 
+             "scale": {"range": [
+          "#d11141",
+          "#00b159",
+          "#ff0000",
+          "#6b486b",
+          "#a05d56",
+          "#d0743c",
+          "#ff8c00",
+          "#008000",
+          "#363b74",
+          "#400000",
+          "#204c39",
+          "#009fff"
+        ]}},
+    "tooltip": {"field": "Country", "type": "nominal"}
+  },
+      },
+                
+      {
+      "mark": "rule",
+      "encoding": {
+        "y": {
+          "aggregate": "mean",
+          "field": "Population",
+          "type": "quantitative",
+        },
+        "color": {"value": "grey"},
+        "size": {"value": 2},
+     
+      },
+      },
+         
+ 
+          ]
+            
+};
+      
+      
+        //GDP PER PERSON ACROSS EUROPEAN COUNTRIES
+      
+      var GDPperPers = {
+          "height": 300,
+          "title": "GDP PER CAPITA (PER PERSON) VS POPULATION DENSITY",
+    "$schema": "https://vega.github.io/schema/vega-lite/v2.json",
+    "data": {
+      "url": "factbookeu.csv"
+    },
+  "transform": [
+   //{"calculate": "datum.Population/datum.Area_sq_km", "as": "Ratio"},
+      {"calculate": "datum.GDP/datum.Population", "as": "GDP per person"},
+      {"calculate": "datum.Population/datum.Area_sq_km", "as": "Ratio"},
+  ],
+         
+          "layer": [ {
+   "mark": "bar",
+    "encoding": {
+     
+        "x": {"field": "Country", "type": "nominal"},
+        "y": {"field": "Ratio", "type": "quantitative",
+              "axis": {
+            "grid": true,
+          },
+          "scale": {"zero": false},
+        "opacity": {"value": 0.7},
+        "tooltip": {"field": "Ratio", "type": "quantitative"}
+         },
+},    
+  },
+                     {
+     "mark": "bar",
+      "encoding": {
+      "x": {"field": "Country", "type": "nominal",},
+        "y": {
+          "field": "GDP per person", "type": "quantitative",
+          "axis": {
+            "grid": false
+          },
+          "scale": {"zero": false},
+        },
+        "color": {"value":"#3399ff"},
+          "opacity": {"value": 0.6},
+          
+          //"field": "GDP per person", "type": "quantitative"}//, "scale": {"range": ["#99cc99", "#004000"],}}
+    },}, 
+   
+  ],
+ 
+  "resolve": {"scale": {"y": "independent"}},
+}; 
+      
+      
+        var popGDPScatter = {
+             "title": "Population vs GDP - Highest density countries",
+    "$schema": "https://vega.github.io/schema/vega-lite/v2.json",
+            "width": 400,
+            "height": 350,
+    "data": {
+      "url": "factbookeu.csv"
+    },
+         //   "transform": [ 
+      //{"filter": "datum.Area_sq_km > 200000"}
+       //  ],
+             "transform": [
+   {"calculate": "datum.Population/datum.Area_sq_km", "as": "Population Ratio"},
+      {"calculate": "datum.GDP/datum.Population", "as": "GDP per person"},
+            
+         
+          {"filter": {"field": "Population Ratio", "range": [130, 1300]}}],
+            "layer": [ 
+                {
+      "mark": {"type": "point", "filled": true},
+  "encoding": {
+    "x": {"field": "GDP per person", "type": "quantitative", "axis": {
+            "grid": true
+          },
+          "scale": {"zero": false},
+        },
+    "y": {"field": "Population Ratio", "type": "quantitative", "axis": {
+            "grid": true
+          },
+          "scale": {"zero": false},
+        },
+    "color": {"field": "Country", "type": "nominal", 
+    },
+    "tooltip": {"field": "Country", "type": "nominal"}
+  },
+                },
+      ],
+        };
+      
+      // POPULATION OF LARGEST COUNTRIES VS AREA - SCATTERPLOT
+        var popGDPScatter2 = {
+             "title": "Population vs GDP - Highest GDP countries",
+    "$schema": "https://vega.github.io/schema/vega-lite/v2.json",
+            "width": 400,
+            "height": 350,
+    "data": {
+      "url": "factbookeu.csv"
+    },
+         //   "transform": [ 
+      //{"filter": "datum.Area_sq_km > 200000"}
+       //  ],
+             "transform": [
+   {"calculate": "datum.Population/datum.Area_sq_km", "as": "Population Ratio"},
+      {"calculate": "datum.GDP/datum.Population", "as": "GDP per person"},
+            
+         
+          {"filter": {"field": "GDP per person", "range": [21000, 60000]}}],
+            "layer": [ 
+                {
+      "mark": {"type": "point", "filled": true},
+  "encoding": {
+    "x": {"field": "GDP per person", "type": "quantitative", "axis": {
+            "grid": true
+          },
+          "scale": {"zero": false},
+        },
+    "y": {"field": "Population Ratio", "type": "quantitative", "axis": {
+            "grid": true
+          },
+          "scale": {"zero": false},
+        },
+    "color": {"field": "Country", "type": "nominal", 
+    },
+    "tooltip": {"field": "Country", "type": "nominal"}
+  },
+                },
+      ],
+        };
+      
+      
+ 
+      
+   // POPULATION DENSITY ACROSS EUROPEAN COUNTRIES
+         var popDens = {
+              "title": "POPULATION DENSITY - POPULATION TO AREA RATIO",
+    "$schema": "https://vega.github.io/schema/vega-lite/v2.json",
+             "height": 300,
+    "data": {
+      "url": "factbookeu.csv"
+    },
+  "transform": [
+   {"calculate": "datum.Population/datum.Area_sq_km", "as": "Ratio"},
+  ],
+             "layer": [{
+   "mark": "bar",
+    "encoding": {
+       // "x": {"field": "Year","type": "temporal", "axis": {"format": "%Y"}}, //"bin": "true",
+        "x": {"field": "Country", "type": "nominal", "sort": {"op": "mean", "field": "Ratio"} },
+        "y": {"field": "Ratio", "type": "quantitative"},
+        "tooltip": {"field": "Ratio", "type": "quantitative"}
+        
+}
+             },
+   {
+    "mark": "rule",
+      "encoding": {
+        "y": {
+          "aggregate": "mean",
+          "field": "Ratio",
+          "type": "quantitative",
+        },
+        "color": {"value": "red"},
+        "size": {"value": 2},
+      },
+            }
+  ],
+};           
+      
+
+         
+      
+      var GPDaverage = {
+              "title": "AVERAGE GPD PER CAPITA (PER PERSON)",
+          "height": 300,
+    "$schema": "https://vega.github.io/schema/vega-lite/v2.json",
+              
+    "data": {
+      "url": "factbookeu.csv"
+    },
+          "transform": [
+   //{"calculate": "datum.Population/datum.Area_sq_km", "as": "Ratio"},
+      {"calculate": "datum.GDP/datum.Population", "as": "GDP per person"},
+              ],
+      
+        "layer": [
+    {
+      "mark": "bar",
+      "encoding": {
+        "x": {"field": "Country", "type": "nominal", "sort": {"op": "mean", "field": "GDP per person"}},
+        "y": {"field": "GDP per person", "type": "quantitative"},
+           "tooltip": {"field": "GDP per person", "type": "quantitative"}
+      }
+    },
+            {
+    "mark": "rule",
+      "encoding": {
+        "y": {
+          "aggregate": "mean",
+          "field": "GDP per person",
+          "type": "quantitative",
+        },
+        "color": {"value": "red"},
+        "size": {"value": 2},
+      },
+            }
+  ],
+ // "resolve": {"scale": {"y": "independent"}}
+};
+      
+  
+      
+  // Embed the visualization in the container with id `vis`
+  vegaEmbed("#population", population);
+  vegaEmbed("#areasq", areasq);
+  vegaEmbed("#popScatter", popScatter);
+       vegaEmbed("#GPDaverage", GPDaverage);
+      vegaEmbed("#GDPperPers", GDPperPers);
+      vegaEmbed("#popDens", popDens);
+      vegaEmbed("#popGDPScatter", popGDPScatter);
+       vegaEmbed("#popGDPScatter2", popGDPScatter2); 
+  </script>
+    </div>
+</body>
+</html>

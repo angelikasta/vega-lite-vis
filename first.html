@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Europe - Statistics</title>
+  <meta charset="utf-8">
+    
+    
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vega/3.0.8/vega.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vega-lite/2.0.3/vega-lite.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vega-embed/3.0.0-rc7/vega-embed.js"></script>
+    <!-- Dependencies for Vega visualization-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vega/3.0.8/vega.min.js"></script>
+<!-- Dependencies for Vega-lite visualization-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vega-lite/2.0.3/vega-lite.min.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="vega.css" />
+<!-- Vega Tooltip
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vega-tooltip/0.4.4/vega-tooltip.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/vega-tooltip/0.4.4/vega-tooltip.min.css">
+-->
+  <style media="screen">
+    /* Add space between Vega-Embed links  */
+    .vega-actions a {
+      margin-right: 5px;
+    }
+  </style>
+</head>
+<body>
+    <div class="header">
+  <h1>Europe - Statistics</h1>
+    </div>
+    
+    
+<ul class="topnav">
+    <li><a href="vega.html">Story 1</a></li>
+  <li><a href="first.html">Story 2</a></li>
+    
+ 
+    </ul>
+    
+    <div class="row">
+        <div class="column middle">
+  <!-- Container for the visualization -->
+    <div id="birthRate"></div>
+        </div>
+         <div class="column side"> 
+            <h3>
+            For this tutorial, we will create visualizations to explore weather data for Seattle, taken from NOAA. The dataset is a CSV file with columns for the temperature (in Celsius), precipitation (in centimeter), wind (in meter/second), and weather type. We have one row for each day from January 1st, 2012 to December 31st, 2015.
+
+To load the CSV file with Vega-Lite, we need to provide a URL and set the format type in the data section of the specification.
+        </h3>
+        </div>
+         <div class="column middle">
+             
+    <div id="deathRate"></div>
+        </div>
+        
+         <div class="column side"> 
+            <h3>
+            For this tutorial, we will create visualizations to explore weather data for Seattle, taken from NOAA. The dataset is a CSV file with columns for the temperature (in Celsius), precipitation (in centimeter), wind (in meter/second), and weather type. We have one row for each day from January 1st, 2012 to December 31st, 2015.
+
+To load the CSV file with Vega-Lite, we need to provide a URL and set the format type in the data section of the specification.
+        </h3>
+        </div>
+         <div class="column h">
+             
+    <div id="birthVsDeath"></div>
+        </div>
+         <div class="column h"> 
+            <h3>
+            For this tutorial, we will create visualizations to explore weather data for Seattle, taken from NOAA. The dataset is a CSV file with columns for the temperature (in Celsius), precipitation (in centimeter), wind (in meter/second), and weather type. We have one row for each day from January 1st, 2012 to December 31st, 2015.
+
+To load the CSV file with Vega-Lite, we need to provide a URL and set the format type in the data section of the specification.
+        </h3>
+        </div>
+         <div class="column middle">
+    <div id="BirthToDeathRatio"></div>
+        </div>
+         <div class="column side"> 
+            <h3>
+            For this tutorial, we will create visualizations to explore weather data for Seattle, taken from NOAA. The dataset is a CSV file with columns for the temperature (in Celsius), precipitation (in centimeter), wind (in meter/second), and weather type. We have one row for each day from January 1st, 2012 to December 31st, 2015.
+
+To load the CSV file with Vega-Lite, we need to provide a URL and set the format type in the data section of the specification.
+        </h3>
+        </div>
+        
+         <div class="column t">
+     <div id="DeathRateHisto"></div>
+        </div>
+        <div class="column t">
+     <div id="HighestDeathHisto"></div>
+        </div>
+         <div class="column t">
+     <div id="LowestDeathHisto"></div>
+        </div>
+        <div class="column t"> 
+            <h3>
+            For this tutorial, we will create visualizations to explore weather data for Seattle, taken from NOAA. The dataset is a CSV file with columns for the temperature (in Celsius), precipitation (in centimeter), wind (in meter/second), and weather type. We have one row for each day from January 1st, 2012 to December 31st, 2015.
+
+To load the CSV file with Vega-Lite, we need to provide a URL and set the format type in the data section of the specification.
+                 For this tutorial, we will create visualizations to explore weather data for Seattle, taken from NOAA. The dataset is a CSV file with columns for the temperature (in Celsius), precipitation (in centimeter), wind (in meter/second), and weather type. We have one row for each day from January 1st, 2012 to December 31st, 2015.
+
+To load the CSV file with Vega-Lite, we need to provide a URL and set the format type in the data section of the specification. meter/second), and weather type. We have one row for each day from January 1st, 2012 to December 31st, 2015.
+
+To load the CSV file with Vega-Lite, we need to provide a URL and set the format type in the data section of the specification.
+        </h3>
+        </div>
+      <div class="column h">
+             
+    <div id="GPDaverage"></div>
+        </div>
+         <div class="column h"> 
+            <h3>
+            For this tutorial, we will create visualizations to explore weather data for Seattle, taken from NOAA. The dataset is a CSV file with columns for the temperature (in Celsius), precipitation (in centimeter), wind (in meter/second), and weather type. We have one row for each day from January 1st, 2012 to December 31st, 2015.
+
+To load the CSV file with Vega-Lite, we need to provide a URL and set the format type in the data section of the specification.
+        </h3>
+        </div>  
+         
+  <div class="column t">
+     <div id="Scatter2"></div>
+        </div>
+        <div class="column t">
+     <div id="Scatter3"></div>
+        </div>
+        
+     
+         <div class="column middle">
+<div id="lifeExpect"></div>
+        </div>
+         <div class="column side"> 
+            <h3>
+            For this tutorial, we will create visualizations to explore weather data for Seattle, taken from NOAA. The dataset is a CSV file with columns for the temperature (in Celsius), precipitation (in centimeter), wind (in meter/second), and weather type. We have one row for each day from January 1st, 2012 to December 31st, 2015.
+
+To load the CSV file with Vega-Lite, we need to provide a URL and set the format type in the data section of the specification.
+        </h3>
+        </div>
+        
+        
+         <div class="column t">
+    <div id="LifeExpHisto"></div>
+        </div>
+        
+         <div class="column t">
+     <div id="AverLifeExptHisto"></div>
+        </div>
+         <div class="column t">
+     <div id="LifeExpectLowest"></div>
+        </div>
+        <div class="column t"> 
+            <h3>
+            For this tutorial, we will create visualizations to explore weather data for Seattle, taken from NOAA. The dataset is a CSV file with columns for the temperature (in Celsius), precipitation (in centimeter), wind (in meter/second), and weather type. We have one row for each day from January 1st, 2012 to December 31st, 2015.
+
+To load the CSV file with Vega-Lite, we need to provide a URL and set the format type in the data section of the specification.
+        </h3>
+        </div>
+    </div>
+   
+    
+  <script>
+      
+      
+  
+   // BIRTH RATE ACROSS EUROPEAN COUNTRIES - BAR CHART   
+      
+ var birthRate = {
+        "title": "BIRTH RATE ACROSS EUROPEAN COUNTRIES",
+     "height": 300,
+    "$schema": "https://vega.github.io/schema/vega-lite/v2.json",
+    "data": {
+      "url": "factbookeu.csv"
+    },
+     "layer": [ {
+   "mark": "bar",
+    "encoding": {
+       // "x": {"field": "Year","type": "temporal", "axis": {"format": "%Y"}}, //"bin": "true",
+        "x": {"field": "Country", "type": "nominal", "sort": {"op": "mean", "field": "Birth_rate"}},
+        "y": {"field": "Birth_rate", "type": "quantitative",
+             "axis": {
+            "grid": true
+          },
+          "scale": {"zero": false}
+      
+             },
+        "tooltip": {"field": "Birth_rate", "type": "quantitative"}
+        
+}
+     },
+     
+  {
+      "mark": "rule",
+      "encoding": {
+        "y": {
+          "aggregate": "mean",
+          "field": "Birth_rate",
+          "type": "quantitative",
+        },
+        "color": {"value": "red"},
+        "size": {"value": 2},
+     
+      },
+                     },
+              ],
+  };
+      
+       // DEATH RATE ACROSS EUROPEAN COUNTRIES
+      
+            var deathRate = {
+                 "title": "DEATH RATE ACROSS COUNTRIES",
+                "height": 300,
+    "$schema": "https://vega.github.io/schema/vega-lite/v2.json",
+    "data": {
+      "url": "factbookeu.csv"
+    },
+       "layer": [ {
+   "mark": "bar",
+    "encoding": {
+       // "x": {"field": "Year","type": "temporal", "axis": {"format": "%Y"}}, //"bin": "true",
+        "x": {"field": "Country", "type": "nominal", "sort": {"op": "mean", "field": "Death_rate"}},
+        "y": {"field": "Death_rate", "type": "quantitative",
+             "axis": {
+            "grid": true
+          },
+          "scale": {"zero": false}
+      
+             },
+        "tooltip": {"field": "Death_rate", "type": "quantitative"}
+        
+}
+     },
+     
+  {
+      "mark": "rule",
+      "encoding": {
+        "y": {
+          "aggregate": "mean",
+          "field": "Death_rate",
+          "type": "quantitative",
+        },
+        "color": {"value": "red"},
+        "size": {"value": 2},
+     
+      },
+                     },
+              ],
+  };
+      
+     
+      
+ // BIRTH RATE VS DEATH RATE ACROSS EUROPEAN COUNTRIES - BAR + POINT CHART
+       var birthVsDeath = {
+            "title": " BIRTH RATE VS DEATH RATE ACROSS EUROPEAN COUNTRIES",
+           "height": 300,
+    "$schema": "https://vega.github.io/schema/vega-lite/v2.json",
+    "data": {
+      "url": "factbookeu.csv"
+    },
+      
+        "layer": [
+    {
+      "mark": "bar",
+      "encoding": {
+        "x": {"field": "Country", "type": "nominal"},
+        "y": {"field": "Birth_rate", "type": "quantitative",
+              "axis": {
+            "grid": false
+          },
+          "scale": {"zero": false},
+             // "stack":  "normalize",
+             },
+          "opacity": {"value": 0.7},
+      },
+     //   "config": {
+  //  "bar": {
+ //     "binSpacing": 0
+ //   }
+ // }
+    },
+    {
+      "mark": "bar",
+      "encoding": {
+        "x": {"field": "Country", "type": "nominal"},
+        "y": {
+          "field": "Death_rate", "type": "quantitative",
+          "axis": {
+            "grid": false
+          },
+          "scale": {"zero": false},
+           // "stack":  "normalize",
+        
+        "color": {"value": "firebrick"},
+           "opacity": {"value": 0.7},
+      }},
+    }
+  ],
+  "resolve": {"scale": {"y": "independent"}}
+};
+      
+      // Birth to Death ratio
+         var BirthToDeathRatio = {
+              "title": "BIRTH RATE TO DEATH RATE RATIO",
+           
+    "$schema": "https://vega.github.io/schema/vega-lite/v2.json",
+             "height": 300,
+    "data": {
+      "url": "factbookeu.csv"
+    },
+  "transform": [
+   {"calculate": "datum.Birth_rate/datum.Death_rate", "as": "Ratio"},
+  ],
+             "layer": [{
+   "mark": "bar",
+    "encoding": {
+       // "x": {"field": "Year","type": "temporal", "axis": {"format": "%Y"}}, //"bin": "true",
+        "x": {"field": "Country", "type": "nominal", "sort": {"op": "mean", "field": "Ratio"} },
+        "y": {"field": "Ratio", "type": "quantitative"},
+        "tooltip": {"field": "Ratio", "type": "quantitative"}
+        
+}
+             },
+   {
+    "mark": "rule",
+      "encoding": {
+        "y": {
+          "aggregate": "mean",
+          "field": "Ratio",
+          "type": "quantitative",
+        },
+        "color": {"value": "red"},
+        "size": {"value": 2},
+      },
+            }
+  ],
+}; 
+      
+      
+    
+      
+      
+        // LIFE EXPECTENCY ACROSS EUROPEAN COUNTRIES
+      
+            var lifeExpect = {
+                 "title": "LIFE EXPECTENCY ACROSS COUNTRIES",
+                "height": 300,
+    "$schema": "https://vega.github.io/schema/vega-lite/v2.json",
+    "data": {
+      "url": "factbookeu.csv"
+    },
+      "layer": [ {
+   "mark": "bar",
+    "encoding": {
+       // "x": {"field": "Year","type": "temporal", "axis": {"format": "%Y"}}, //"bin": "true",
+        "x": {"field": "Country", "type": "nominal", "sort": {"op": "mean", "field": "Life expectancy"}},
+        "y": {"field": "Life expectancy", "type": "quantitative",
+             "axis": {
+            "grid": true
+          },
+          "scale": {"zero": false}
+      
+             },
+        "tooltip": {"field": "Life expectancy", "type": "quantitative"}
+        
+}
+     },
+     
+  {
+      "mark": "rule",
+      "encoding": {
+        "y": {
+          "aggregate": "mean",
+          "field": "Life expectancy",
+          "type": "quantitative",
+        },
+        "color": {"value": "red"},
+        "size": {"value": 2},
+     
+      },
+                     },
+              ],
+  };
+       
+            
+  
+      //LIFE EXPECTENCY OVER YEARS - LOWEST COUNTRIES ONLY
+ 
+      var DeathRateHisto = {
+                 "title": "AVERAGE DEATH RATE",
+    "$schema": "https://vega.github.io/schema/vega-lite/v2.json",
+              "width": 400,
+            "height": 300,
+    "data": {
+      "url": "lifeexpt.csv"
+    },
+      
+  "mark": "line",
+  "encoding": {
+    "x": {"field": "Year", "type": "temporal", "axis": {"format": "%Y"}},
+    "y": {"field": "Death rate", "type": "quantitative",
+           "aggregate": "mean",
+          "axis": {
+            "grid": false
+          },
+          "scale": {"zero": false}
+        },
+    
+      
+  },
+}; 
+      
+       //LIFE EXPECTENCY OVER YEARS - LOWEST COUNTRIES ONLY
+ 
+      var LowestDeathHisto = {
+                 "title": "COUNTRIES WITH LOWEST DEATH RATE",
+    "$schema": "https://vega.github.io/schema/vega-lite/v2.json",
+            "width": 400,
+            "height": 300,
+    "data": {
+      "url": "lifeexpt.csv"
+    },
+      
+       "transform": [
+           {"filter": {"field": "Country", "oneOf":["Albania", "Andorra", "Iceland", "Liechtenstein", "Cyprus", "Ireland", "Malta"]}}
+          //  {"calculate": "datum.GDP/datum.Population", "as": "GDP per person"}
+       ],
+  "mark": "line",
+  "encoding": {
+    "x": {"field": "Year", "type": "temporal", "axis": {"format": "%Y"}},
+    "y": {"field": "Death rate", "type": "quantitative",
+          "axis": {
+            "grid": false
+          },
+          "scale": {"zero": false}
+        },
+    
+         
+         
+      "color": {"field": "Country", "type": "nominal"},
+      
+  },
+};
+      
+       var HighestDeathHisto = {
+                 "title": "COUNTRIES WITH HIGHEST DEATH RATE",
+    "$schema": "https://vega.github.io/schema/vega-lite/v2.json",
+            "width": 400,
+            "height": 300,
+    "data": {
+      "url": "lifeexpt.csv"
+    },
+      
+       "transform": [
+           {"filter": {"field": "Country", "oneOf":["Ukraine", "Latvia", "Bulgaria", "Belarus", "Estonia", "Hungary"]}}
+          //  {"calculate": "datum.GDP/datum.Population", "as": "GDP per person"}
+       ],
+  "mark": "line",
+  "encoding": {
+    "x": {"field": "Year", "type": "temporal", "axis": {"format": "%Y"}},
+    "y": {"field": "Death rate", "type": "quantitative",
+          "axis": {
+            "grid": false
+          },
+          "scale": {"zero": false}
+        },
+    
+         
+         
+      "color": {"field": "Country", "type": "nominal"},
+      
+  },
+};
+      
+      //LIFE EXPECTENCY OVER YEARS - LOWEST COUNTRIES ONLY
+ 
+      var LifeExpHisto = {
+                 "title": "LIFE EXPECTENCY OVER YEARS",
+    "$schema": "https://vega.github.io/schema/vega-lite/v2.json",
+            "width": 400,
+            "height": 300,
+    "data": {
+      "url": "lifeexpt.csv"
+    },
+      
+       "transform": [
+           {"filter": {"field": "Country", "oneOf":["Ukraine", "Latvia", "Romania", "Belarus"]}}
+          //  {"calculate": "datum.GDP/datum.Population", "as": "GDP per person"}
+       ],
+  "mark": "line",
+  "encoding": {
+    "x": {"field": "Year", "type": "temporal", "axis": {"format": "%Y"}},
+    "y": {"field": "Life expectancy", "type": "quantitative",
+          "axis": {
+            "grid": false
+          },
+          "scale": {"zero": false}
+        },
+    
+         
+         
+      "color": {"field": "Country", "type": "nominal"},
+      
+  },
+};
+      
+    
+        var AverLifeExptHisto = {
+                 "title": "AVERAGE LIFE EXPECTENCY",
+    "$schema": "https://vega.github.io/schema/vega-lite/v2.json",
+              "width": 400,
+            "height": 300,
+    "data": {
+      "url": "lifeexpt.csv"
+    },
+      
+  "mark": "line",
+  "encoding": {
+    "x": {"field": "Year", "type": "temporal", "axis": {"format": "%Y"}},
+    "y": {"field": "Life expectancy", "type": "quantitative",
+           "aggregate": "mean",
+          "axis": {
+            "grid": false
+          },
+          "scale": {"zero": false}
+        },
+    
+      
+  },
+}; 
+      
+       var LifeExpectLowest = {
+                 "title": "LIFE EXPECTENCY OVER YEARS",
+    "$schema": "https://vega.github.io/schema/vega-lite/v2.json",
+             "width": 400,
+            "height": 300,
+    "data": {
+      "url": "lifeexpt.csv"
+    },
+      
+       "transform": [
+           {"filter": {"field": "Country", "oneOf":["Andorra", "Sweden", "Iceland", "Switzerland"]}}
+          //  {"calculate": "datum.GDP/datum.Population", "as": "GDP per person"}
+       ],
+  "mark": "line",
+  "encoding": {
+    "x": {"field": "Year", "type": "temporal", "axis": {"format": "%Y"}},
+    "y": {"field": "Life expectancy", "type": "quantitative",
+          "axis": {
+            "grid": false
+          },
+          "scale": {"zero": false}
+        },
+    
+         
+         
+      "color": {"field": "Country", "type": "nominal"},
+      
+  },
+};
+      
+       var Scatter2 = {
+             "title": "Highest GDP countries - Death Rate",
+    "$schema": "https://vega.github.io/schema/vega-lite/v2.json",
+            "width": 400,
+            "height": 350,
+    "data": {
+      "url": "factbookeu.csv"
+    },
+         //   "transform": [ 
+      //{"filter": "datum.Area_sq_km > 200000"}
+       //  ],
+             "transform": [
+      {"calculate": "datum.GDP/datum.Population", "as": "GDP per person"},
+            
+         
+          {"filter": {"field": "GDP per person", "range": [21000, 60000]}}],
+            "layer": [ 
+                {
+      "mark": {"type": "point", "filled": true},
+  "encoding": {
+    "x": {"field": "GDP per person", "type": "quantitative", "axis": {
+            "grid": true
+          },
+          "scale": {"zero": false},
+        },
+    "y": {"field": "Death_rate", "type": "quantitative", "axis": {
+            "grid": true
+          },
+          "scale": {"zero": false},
+        },
+    "color": {"field": "Country", "type": "nominal", 
+    },
+    "tooltip": {"field": "Country", "type": "nominal"}
+  },
+                },
+                 {
+      "mark": "rule",
+      "encoding": {
+        "y": {
+          "aggregate": "mean",
+          "field": "Death_rate",
+          "type": "quantitative",
+        },
+        "color": {"value": "grey"},
+        "size": {"value": 2},
+     
+      },
+      },
+         
+      ],
+        };
+      
+       var Scatter3 = {
+             "title": "Lowest GDP countries - Death Rate",
+    "$schema": "https://vega.github.io/schema/vega-lite/v2.json",
+            "width": 400,
+            "height": 350,
+    "data": {
+      "url": "factbookeu.csv"
+    },
+         //   "transform": [ 
+      //{"filter": "datum.Area_sq_km > 200000"}
+       //  ],
+             "transform": [
+      {"calculate": "datum.GDP/datum.Population", "as": "GDP per person"},
+            
+         
+          {"filter": {"field": "GDP per person", "range": [0, 15000]}}],
+            "layer": [ 
+                {
+      "mark": {"type": "point", "filled": true},
+  "encoding": {
+    "x": {"field": "GDP per person", "type": "quantitative", "axis": {
+            "grid": true
+          },
+          "scale": {"zero": false},
+        },
+    "y": {"field": "Death_rate", "type": "quantitative", "axis": {
+            "grid": true
+          },
+          "scale": {"zero": false},
+        },
+    "color": {"field": "Country", "type": "nominal", 
+    },
+    "tooltip": {"field": "Country", "type": "nominal"}
+  },
+                },
+                {
+      "mark": "rule",
+      "encoding": {
+        "y": {
+          "aggregate": "mean",
+          "field": "Death_rate",
+          "type": "quantitative",
+        },
+        "color": {"value": "grey"},
+        "size": {"value": 2},
+     
+      },
+      },
+                
+      ],
+        };
+       var GPDaverage = {
+              "title": "AVERAGE GPD PER CAPITA (PER PERSON)",
+          "height": 300,
+    "$schema": "https://vega.github.io/schema/vega-lite/v2.json",
+              
+    "data": {
+      "url": "factbookeu.csv"
+    },
+          "transform": [
+   //{"calculate": "datum.Population/datum.Area_sq_km", "as": "Ratio"},
+      {"calculate": "datum.GDP/datum.Population", "as": "GDP per person"},
+              ],
+      
+        "layer": [
+    {
+      "mark": "bar",
+      "encoding": {
+        "x": {"field": "Country", "type": "nominal", "sort": {"op": "mean", "field": "GDP per person"}},
+        "y": {"field": "GDP per person", "type": "quantitative"},
+           "tooltip": {"field": "GDP per person", "type": "quantitative"}
+      }
+    },
+            {
+    "mark": "rule",
+      "encoding": {
+        "y": {
+          "aggregate": "mean",
+          "field": "GDP per person",
+          "type": "quantitative",
+        },
+        "color": {"value": "red"},
+        "size": {"value": 2},
+      },
+            }
+  ],
+ // "resolve": {"scale": {"y": "independent"}}
+};
+      
+      
+      
+  // Embed the visualization in the container with id `vis`
+ 
+  vegaEmbed("#birthRate", birthRate);
+    
+      vegaEmbed("#birthVsDeath", birthVsDeath);
+      vegaEmbed("#BirthToDeathRatio", BirthToDeathRatio);
+      vegaEmbed("#lifeExpect", lifeExpect);
+    
+       vegaEmbed("#LifeExpHisto", LifeExpHisto);
+        vegaEmbed("#AverLifeExptHisto", AverLifeExptHisto);
+      vegaEmbed("#LifeExpectLowest", LifeExpectLowest);
+         vegaEmbed("#deathRate", deathRate);
+      vegaEmbed("#DeathRateHisto", DeathRateHisto);
+      vegaEmbed("#LowestDeathHisto", LowestDeathHisto);
+     vegaEmbed("#HighestDeathHisto", HighestDeathHisto);
+       vegaEmbed("#Scatter2", Scatter2);
+       vegaEmbed("#Scatter3", Scatter3);
+      vegaEmbed("#GPDaverage", GPDaverage);
+  </script>
+    
+  
+</body>
+</html>
