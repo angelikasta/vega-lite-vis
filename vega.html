@@ -45,34 +45,38 @@
   <div id="areasq"></div>
             </div>
         <div class="column side"> 
-            <h3>
-            For this tutorial, we will create visualizations to explore weather data for Seattle, taken from NOAA. The dataset is a CSV file with columns for the temperature (in Celsius), precipitation (in centimeter), wind (in meter/second), and weather type. We have one row for each day from January 1st, 2012 to December 31st, 2015.
-
-To load the CSV file with Vega-Lite, we need to provide a URL and set the format type in the data section of the specification.
-        </h3>
+            <div class="textS">
+           To start I decided to look into area in sq km for each country. As a quantitative value is encoded as lenght of the bar which is very effective channel for quantitative data. Also mean of the area in sq km for all countries is encoded as position of the line which again is a very effective channel for quantitative data. As a combination of quantitative data (area sq km) and nominal categorical data (countries), I have chosed a bar chart as that would be the most effective method to display this data. I have also added a tooltip so the user can view in detail the area in sq km of each country.
+            </div>
+           <div class="textS">
+                12 countries out of 39 (Belarus, Romania, United Kingdom, Italy, Poland, Norway, Finland, Germany, Sweden, Spain France and Ukraine) are above average in area size. 
+            </div>
         </div>
 
      <div class="column middle"> 
     <div id="population"></div>
         </div>
-       <div class="column side"> 
-            <h3>
-            For this tutorial, we will create visualizations to explore weather data for Seattle, taken from NOAA. The dataset is a CSV file with columns for the temperature (in Celsius), precipitation (in centimeter), wind (in meter/second), and weather type. We have one row for each day from January 1st, 2012 to December 31st, 2015.
-
-To load the CSV file with Vega-Lite, we need to provide a URL and set the format type in the data section of the specification.
-        </h3>
-        </div> 
+         <div class="column side"> 
+            <div class="textS">
+           Next step I took to analyze the data was to take a look at population across the countries. Population as quantitative value is encoded as lenght of the bar which is very effective channel for quantitative data. Also mean of the population for all countries is encoded as position of the line which again is a very effective channel for quantitative data. As a combination of quantitative data (population) and nominal categorical data (countries), I have chosed a bar chart as that would be the most effective method to display this data. I have also added a tooltip so the user can view in detail the population of each country.
+             </div>
+           <div class="textS">
+                9 countries out of 39 (Netherlands, Romania, Poland, Spain, Ukraine, Italy, United Kingdom, France, Germany) are above average in population size.   
+             </div>
+        </div>
        
         
     <div class="column m">      
     <div id="popScatter"></div>
         </div>
          <div class="column m2"> 
-            <h3>
-            For this tutorial, we will create visualizations to explore weather data for Seattle, taken from NOAA. The dataset is a CSV file with columns for the temperature (in Celsius), precipitation (in centimeter), wind (in meter/second), and weather type. We have one row for each day from January 1st, 2012 to December 31st, 2015.
-
-To load the CSV file with Vega-Lite, we need to provide a URL and set the format type in the data section of the specification.
-        </h3>
+            <div class="textS">
+            Previous two charts displayed the biggest countries and ones with highest population however by comparing this charts it was easy to see that not all of the biggest countries have a very big population. To display this finding I decided to display the 12 countries wih above average size on scatterplot. </div>
+             <div class="textS">
+                The scatterplot consists of population size and area size as two quantitative data types are encoded as position of the point which is a very effective channel for quantitative data. The countries are encoded as colour which is effective channel to represent categorical data.</div>
+             <div class="textS">
+                 It is easy to see that not all big countries have very high population - for example Sweden being the 4th biggest country has below average population, similarly to Finland, Norway and Belarus. 
+             </div>
         </div> 
        
         <div class="column middle"> 
@@ -82,49 +86,66 @@ To load the CSV file with Vega-Lite, we need to provide a URL and set the format
         </div>
         
       <div class="column side"> 
-            <h3>
-            For this tutorial, we will create visualizations to explore weather data for Seattle, taken from NOAA. The dataset is a CSV file with columns for the temperature (in Celsius), precipitation (in centimeter), wind (in meter/second), and weather type. We have one row for each day from January 1st, 2012 to December 31st, 2015.
-
-To load the CSV file with Vega-Lite, we need to provide a URL and set the format type in the data section of the specification.
-        </h3>
+            <div class="textS">
+            Following on the findings from previous charts I decided to have a look at population density across the countries. To do that I took an area size and divided that by the population. The bar chart displays average population per sq km. Population density as quantitative value is encoded as lenght of the bar which is very effective channel for quantitative data. Also mean of the population density for all countries is encoded as position of the line which again is a very effective channel for quantitative data. As a combination of quantitative data (population density) and nominal categorical data (countries), I have chosed a bar chart as that would be the most effective method to display this data. I have also added a tooltip so the user can view in detail the population density of each country. 
+          </div>
+        </div>
+        <div class="column h">
+          <div class="textS">
+          It is very easy to see that Malta has much higher population density than any other country. 10 countries (Malta, Netherlands, Belgium, United Kingdom, Germany, Liechtenstein, Italy, Switzerland, Luxembourg and Andorra) out of 39 have higher than average population density. Out of this 10 countries only 4 (Germany, United Kingdom, Italy and Netherlands) have higher than average overall population and only 3 countries (Germany, Italy, United Kingdom) have bigger than average size in sq km which means that only this 3 countries can be considered biggest in terms of size as well as population density.
+          </div>
+          <div class="textS">
+          It is very interesting to see that countries with the lowest population density, (Iceland, Norway, Finland, Sweden, Estonia, Latvia, Belarus, Lithuania) are all in northern part of Europe. 
+          </div>
         </div>   
         
      <div class="column middle">    
     <div id="GPDaverage"></div> 
         </div>
         <div class="column side"> 
-            <h3>
-            For this tutorial, we will create visualizations to explore weather data for Seattle, taken from NOAA. The dataset is a CSV file with columns for the temperature (in Celsius), precipitation (in centimeter), wind (in meter/second), and weather type. We have one row for each day from January 1st, 2012 to December 31st, 2015.
-
-To load the CSV file with Vega-Lite, we need to provide a URL and set the format type in the data section of the specification.
-        </h3>
+            <div class="textS">
+            Taking into consideration such a varience in population density I decided to see if there is any relationship between population density and ecomical status of the country. To do that I decided to focus on GDP per capita, which is a measure of a country's economic output (GDP) that accounts for its number of people. That makes it a good measurement of a country's standard of living. To get the GDP per capita I have divided the country's GDP by its total population. As a first step I decided to use a bar chart to display the findings for each country. GDP per capita as quantitative value is encoded as lenght of the bar which is very effective channel for quantitative data. Also mean of the GDP per capita for all countries is encoded as position of the line which again is a very effective channel for quantitative data. 
+            </div>
+        </div>
+        <div class="column h">
+            <div class="textS">
+                As a combination of quantitative data (GDP per capita) and nominal categorical data (countries), I have chosen a bar chart as that would be the most effective method to display this data. I have also added a tooltip so the user can view in detail the GDP per capita of each country.
+            It is very easy to see that Luxembourg has a much higher than average GDP per capita. 19 countries out of 39 have higher than average GDP per capita. 
+            </div>
         </div> 
         
-        <div class="column h">  
+        <div class="column h" style="text-align: center">  
       <div id="GDPperPers"></div>
         </div>
         
         <div class="column"> 
-            <h3>
-            For this tutorial, we will create visualizations to explore weather data for Seattle, taken from NOAA. The dataset is a CSV file with columns for the temperature (in Celsius), precipitation (in centimeter), wind (in meter/second), and weather type. We have one row for each day from January 1st, 2012 to December 31st, 2015.
-
-To load the CSV file with Vega-Lite, we need to provide a URL and set the format type in the data section of the specification.
-        </h3>
+            <div class="textS">
+            Next step I took was to compare the population density and GDP per capita to verify whether there is any relationship between them. I have decided to use a stacked bar chart to display this data. GDP per capita and population density as quantitative values are encoded as lenght of the bar which is very effective channel for quantitative data. As there are two quantitative data types (population density and GDP per capita) I decide to add colour and opacity for the user to be able to see both values. Light blue colour displays the GDP per capita and darker blue the population density. I have decided to use a stacked bar chart instead of scatterplot as because of the amount of countries scatterplot wouldnt show the data in clear way. 
+            </div>
+           <div class="textS">
+            It is clear to see that some countries such as Luxembourgh has very high GDP per capita as well as very high population density. Looking at other countries with high density population such as Belgium, Netherlands, United Kingdom, Germany, Switzerland they all, apart from Malta, have higher than average GDP per capita. However, not all countries with higher than average GDP per capita have higher than average population density, as an example Norway, Finland and Sweden have very low population density despite having high GDP per capita.
+            
+            </div>
         </div> 
         
           <div class="column t"> 
-        <div id="popGDPScatter"></div>
+        <div id="popGDPScatter" style="text-align: center"></div>
         </div>
           <div class="column t">
         
-       <div id="popGDPScatter2"></div>
+       <div id="popGDPScatter2" style="text-align: center"></div>
         </div>
          <div class="column"> 
-            <h3>
-            For this tutorial, we will create visualizations to explore weather data for Seattle, taken from NOAA. The dataset is a CSV file with columns for the temperature (in Celsius), precipitation (in centimeter), wind (in meter/second), and weather type. We have one row for each day from January 1st, 2012 to December 31st, 2015.
-
-To load the CSV file with Vega-Lite, we need to provide a URL and set the format type in the data section of the specification.
-        </h3>
+            <div class="textS">
+            To follow up from the findings on previous chart I decided to create 2 scatterplots to verify the results. First scatterplot displays all high population density countries and their GDP per capita. Second scatterplot displays all countries with highest GDP per capita and their population density.  The scatterplot consists of population density and GDP per capita as two quantitative data types are encoded as position of the point which is a very effective channel for quantitative data. The countries are encoded as colour which is effective channel to represent categorical data.
+             </div>
+             <div class="textS">
+             First scatterplot displaying the highest density countries shows that all countires apart from Malta, have over than 20000 GDP per person which is average across the Europe, which means all high density countries apart from Malta have higher than average GDP per person.
+             
+             </div>
+            <div class="textS">
+             Second scatterplot however shows all the highest GDP countries however not all of them have high population density. 
+             </div>
         </div>
        
     
@@ -455,7 +476,7 @@ To load the CSV file with Vega-Lite, we need to provide a URL and set the format
          
       
       var GPDaverage = {
-              "title": "AVERAGE GPD PER CAPITA (PER PERSON)",
+              "title": "AVERAGE GDP PER CAPITA (PER PERSON)",
           "height": 300,
     "$schema": "https://vega.github.io/schema/vega-lite/v2.json",
               

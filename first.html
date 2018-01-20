@@ -45,11 +45,13 @@
     <div id="birthRate"></div>
         </div>
          <div class="column side"> 
-            <h3>
-            For this tutorial, we will create visualizations to explore weather data for Seattle, taken from NOAA. The dataset is a CSV file with columns for the temperature (in Celsius), precipitation (in centimeter), wind (in meter/second), and weather type. We have one row for each day from January 1st, 2012 to December 31st, 2015.
-
-To load the CSV file with Vega-Lite, we need to provide a URL and set the format type in the data section of the specification.
-        </h3>
+            <div class="textS">
+        Firstly I decided to have a look at the birth rate across the countries. Birth rate as quantitative value is encoded as lenght of the bar which is very effective channel for quantitative data. Also mean of the birth rate for all countries is encoded as position of the line which again is a very effective channel for quantitative data. As a combination of quantitative data (birth rate) and nominal categorical data (countries), I have chosen a bar chart as that would be the most effective method to display this data. I have also added a tooltip so the user can view in detail the birth rate of each country.
+             </div>
+             <div class="textS">
+        16 countries out of 39 have higher than average birth rate. Albania, Ireland and Iceland have much higher birth rate than all other countries. Germany however have much lower birth rate than other countries. 
+             </div>
+             
         </div>
          <div class="column middle">
              
@@ -57,104 +59,94 @@ To load the CSV file with Vega-Lite, we need to provide a URL and set the format
         </div>
         
          <div class="column side"> 
-            <h3>
-            For this tutorial, we will create visualizations to explore weather data for Seattle, taken from NOAA. The dataset is a CSV file with columns for the temperature (in Celsius), precipitation (in centimeter), wind (in meter/second), and weather type. We have one row for each day from January 1st, 2012 to December 31st, 2015.
-
-To load the CSV file with Vega-Lite, we need to provide a URL and set the format type in the data section of the specification.
-        </h3>
+          <div class="textS">
+        Secondly I wanted to have a look at the death rate across the countries. Death rate as quantitative value is encoded as lenght of the bar which is very effective channel for quantitative data. Also mean of the death rate for all countries is encoded as position of the line which again is a very effective channel for quantitative data. As a combination of quantitative data (death rate) and nominal categorical data (countries), I have chosen a bar chart as that would be the most effective method to display this data. I have also added a tooltip so the user can view in detail the death rate of each country.
+             </div>
+             <div class="textS">
+        20 countries out of 39 have higher than average birth rate. It is easy to see that Ukraine has much higher death rate than all other countries. Albania however have much lower death rate than other countries. 
+             </div>
         </div>
-         <div class="column h">
+         <div class="column h" style="text-align: center">
              
     <div id="birthVsDeath"></div>
         </div>
          <div class="column h"> 
-            <h3>
-            For this tutorial, we will create visualizations to explore weather data for Seattle, taken from NOAA. The dataset is a CSV file with columns for the temperature (in Celsius), precipitation (in centimeter), wind (in meter/second), and weather type. We have one row for each day from January 1st, 2012 to December 31st, 2015.
-
-To load the CSV file with Vega-Lite, we need to provide a URL and set the format type in the data section of the specification.
-        </h3>
+            <div class="textS">
+            Next step I took was to compare the birth rate and death rate. I have decided to use a stacked bar chart to display this data. birth rate and death rate as quantitative values are encoded as lenght of the bar which is very effective channel for quantitative data. As there are two quantitative data types (birth and death rates) I decide to add colour and opacity for the user to be able to see both values and which value is higher at same time. Light blue colour displays the birth rate and darker blue the death rate. I have decided to use a stacked bar chart instead of for example scatterplot as because of the amount of countries scatterplot wouldnt show the data in clear way. 
+            </div>
+           <div class="textS">
+            It is clear to see that some countries such as Albania has very high birth rate as well as very low death rate. 23 countries out of 39 have higher birth rate than death rate. Majority of the countries have higher birth rate than death rate. 
+            
+            </div>
         </div>
          <div class="column middle">
     <div id="BirthToDeathRatio"></div>
         </div>
          <div class="column side"> 
-            <h3>
-            For this tutorial, we will create visualizations to explore weather data for Seattle, taken from NOAA. The dataset is a CSV file with columns for the temperature (in Celsius), precipitation (in centimeter), wind (in meter/second), and weather type. We have one row for each day from January 1st, 2012 to December 31st, 2015.
-
-To load the CSV file with Vega-Lite, we need to provide a URL and set the format type in the data section of the specification.
-        </h3>
+            <div class="textS">
+            Following on the findings from previous charts I decided to have a look at birth vs death rate ratio. To do that I took an birth rate and divided that by the death rate. Result of 1 would mean equal birth rate and death rate, higher than 1 means higher birth rate, and lower than 1 represents higher death rate. The bar chart displays the ratio. The ratio as quantitative value is encoded as lenght of the bar which is very effective channel for quantitative data. Also mean of the ratio for all countries is encoded as position of the line which again is a very effective channel for quantitative data. As a combination of quantitative data (birth/death ratio) and nominal categorical data (countries), I have chosed a bar chart as that would be the most effective method to display this data.
+          </div>
+        </div>
+        <div class="column h">
+          <div class="textS">
+          It is clear to see that majority of the countries have higher than 1 ratio which means higher birth rate than death rate. The average across all countries is around 1.15 and 13 countries are above the average rate. 
+          </div>
         </div>
         
-         <div class="column t">
+         <div class="column t" style="text-align: center">
      <div id="DeathRateHisto"></div>
         </div>
-        <div class="column t">
+        <div class="column t" style="text-align: center">
      <div id="HighestDeathHisto"></div>
         </div>
-         <div class="column t">
+         <div class="column t" style="text-align: center">
      <div id="LowestDeathHisto"></div>
         </div>
         <div class="column t"> 
-            <h3>
-            For this tutorial, we will create visualizations to explore weather data for Seattle, taken from NOAA. The dataset is a CSV file with columns for the temperature (in Celsius), precipitation (in centimeter), wind (in meter/second), and weather type. We have one row for each day from January 1st, 2012 to December 31st, 2015.
-
-To load the CSV file with Vega-Lite, we need to provide a URL and set the format type in the data section of the specification.
-                 For this tutorial, we will create visualizations to explore weather data for Seattle, taken from NOAA. The dataset is a CSV file with columns for the temperature (in Celsius), precipitation (in centimeter), wind (in meter/second), and weather type. We have one row for each day from January 1st, 2012 to December 31st, 2015.
-
-To load the CSV file with Vega-Lite, we need to provide a URL and set the format type in the data section of the specification. meter/second), and weather type. We have one row for each day from January 1st, 2012 to December 31st, 2015.
-
-To load the CSV file with Vega-Lite, we need to provide a URL and set the format type in the data section of the specification.
-        </h3>
+            <div class="textS">
+            Following this I wanted to have a look at death rate across the countries over the years. I decided to use line as a mark as it is very effective to display the temporal type of data such as value across the years. Position of the line on the graph is an effective channel to display the quantitative data such as death rate. 
+        </div>
+            <div class="textS">
+            It is interesting to see that generally average death rate across the years was quite stable and around the value of 9.5-10. However looking into more detail for countries with highest as well as lowest rates the rate was not as stable over the years. Majority of the countries with the highest death rate range anywhere between 8 and over 16, and majority of the countries increased over years especially between years 1985 and 2000. 
+            However countries with lowest death rate show different trend, majority of the countries show decrease over the years and the values range between 12 and 6. 
+        </div>
         </div>
       <div class="column h">
              
-    <div id="GPDaverage"></div>
+    <div id="GPDaverage" style="text-align: center"></div>
         </div>
          <div class="column h"> 
-            <h3>
-            For this tutorial, we will create visualizations to explore weather data for Seattle, taken from NOAA. The dataset is a CSV file with columns for the temperature (in Celsius), precipitation (in centimeter), wind (in meter/second), and weather type. We have one row for each day from January 1st, 2012 to December 31st, 2015.
-
-To load the CSV file with Vega-Lite, we need to provide a URL and set the format type in the data section of the specification.
-        </h3>
+            <div class="textS">
+            Taking into consideration such a varience in death rate I decided to see if there is any relationship between death rate and ecomical status of the country. To do that I decided to focus on GDP per capita, which is a measure of a country's economic output (GDP) that accounts for its number of people. That makes it a good measurement of a country's standard of living. To get the GDP per capita I have divided the country's GDP by its total population. As a first step I decided to use a bar chart to display the findings for each country. GDP per capita as quantitative values are encoded as lenght of the bar which is very effective channel for quantitative data. Also mean of the GDP per capita for all countries is encoded as position of the line which again is a very effective channel for quantitative data.
+        </div>
+              <div class="textS">
+                As a combination of quantitative data (GDP per capita) and nominal categorical data (countries), I have chosed a bar chart as that would be the most effective method to display this data. I have also added a tooltip so the user can view in detail the GDP per capita of each country.
+            It is very easy to see that Luxembourg has a much higher than average GDP per capita. 19 countries out of 39 have higher than average GDP per capita. 
+            </div>
+             
         </div>  
          
-  <div class="column t">
+  <div class="column t" style="text-align: center">
      <div id="Scatter2"></div>
         </div>
-        <div class="column t">
+        <div class="column t" style="text-align: center">
      <div id="Scatter3"></div>
+        </div>
+         <div class="column h"> 
+            <div class="textS">
+            To follow up from the findings on previous chart I decided to create 2 scatterplots to verify the results. First scatterplot displays all high GDP per capita countries and their death rate. Second scatterplot displays all countries with low GDP per capita and their death rate. The scatterplots consists of death rate and GDP per capita as two quantitative data types are encoded as position of the point which is a very effective channel for quantitative data. The countries are encoded as colour which is effective channel to represent categorical data.
+             </div>
+             <div class="textS">
+             First scatterplot displaying the highest GDP countries shows average death rate for this countries is around 9. All of the countries with highest GDP have a death rate below 11 and majority of them (11/19) of these countries have death rate below average.
+             
+             </div>
+            <div class="textS">
+             Second scatterplot however shows all the lowest GDP countries and average death rate between them is higher than average among all countries. Only 5 out of 16 of this countries have below average death rate. 
+             </div>
         </div>
         
      
-         <div class="column middle">
-<div id="lifeExpect"></div>
-        </div>
-         <div class="column side"> 
-            <h3>
-            For this tutorial, we will create visualizations to explore weather data for Seattle, taken from NOAA. The dataset is a CSV file with columns for the temperature (in Celsius), precipitation (in centimeter), wind (in meter/second), and weather type. We have one row for each day from January 1st, 2012 to December 31st, 2015.
-
-To load the CSV file with Vega-Lite, we need to provide a URL and set the format type in the data section of the specification.
-        </h3>
-        </div>
         
-        
-         <div class="column t">
-    <div id="LifeExpHisto"></div>
-        </div>
-        
-         <div class="column t">
-     <div id="AverLifeExptHisto"></div>
-        </div>
-         <div class="column t">
-     <div id="LifeExpectLowest"></div>
-        </div>
-        <div class="column t"> 
-            <h3>
-            For this tutorial, we will create visualizations to explore weather data for Seattle, taken from NOAA. The dataset is a CSV file with columns for the temperature (in Celsius), precipitation (in centimeter), wind (in meter/second), and weather type. We have one row for each day from January 1st, 2012 to December 31st, 2015.
-
-To load the CSV file with Vega-Lite, we need to provide a URL and set the format type in the data section of the specification.
-        </h3>
-        </div>
     </div>
    
     
@@ -246,56 +238,53 @@ To load the CSV file with Vega-Lite, we need to provide a URL and set the format
               ],
   };
       
-     
       
- // BIRTH RATE VS DEATH RATE ACROSS EUROPEAN COUNTRIES - BAR + POINT CHART
-       var birthVsDeath = {
-            "title": " BIRTH RATE VS DEATH RATE ACROSS EUROPEAN COUNTRIES",
-           "height": 300,
+      var birthVsDeath = {
+          "height": 300,
+          "title": "GDP PER CAPITA (PER PERSON) VS POPULATION DENSITY",
     "$schema": "https://vega.github.io/schema/vega-lite/v2.json",
     "data": {
       "url": "factbookeu.csv"
     },
-      
-        "layer": [
-    {
-      "mark": "bar",
-      "encoding": {
+         
+          "layer": [ {
+   "mark": "bar",
+    "encoding": {
+     
         "x": {"field": "Country", "type": "nominal"},
         "y": {"field": "Birth_rate", "type": "quantitative",
               "axis": {
-            "grid": false
+            "grid": true,
           },
           "scale": {"zero": false},
-             // "stack":  "normalize",
-             },
-          "opacity": {"value": 0.7},
-      },
-     //   "config": {
-  //  "bar": {
- //     "binSpacing": 0
- //   }
- // }
-    },
-    {
-      "mark": "bar",
+        "opacity": {"value": 0.7},
+        "tooltip": {"field": "Birth_rate", "type": "quantitative"}
+         },
+},    
+  },
+                     {
+     "mark": "bar",
       "encoding": {
-        "x": {"field": "Country", "type": "nominal"},
+      "x": {"field": "Country", "type": "nominal",},
         "y": {
           "field": "Death_rate", "type": "quantitative",
           "axis": {
             "grid": false
           },
           "scale": {"zero": false},
-           // "stack":  "normalize",
-        
-        "color": {"value": "firebrick"},
-           "opacity": {"value": 0.7},
-      }},
-    }
+        },
+        "color": {"value":"#3399ff"},
+          "opacity": {"value": 0.6},
+          
+          //"field": "GDP per person", "type": "quantitative"}//, "scale": {"range": ["#99cc99", "#004000"],}}
+    },}, 
+   
   ],
-  "resolve": {"scale": {"y": "independent"}}
-};
+ 
+  //"resolve": {"scale": {"y": "independent"}},
+}; 
+      
+ 
       
       // Birth to Death ratio
          var BirthToDeathRatio = {
@@ -401,7 +390,7 @@ To load the CSV file with Vega-Lite, we need to provide a URL and set the format
           "axis": {
             "grid": false
           },
-          "scale": {"zero": false}
+          //"scale": {"zero": false}
         },
     
       
@@ -430,7 +419,7 @@ To load the CSV file with Vega-Lite, we need to provide a URL and set the format
           "axis": {
             "grid": false
           },
-          "scale": {"zero": false}
+         // "scale": {"zero": false}
         },
     
          
@@ -460,7 +449,7 @@ To load the CSV file with Vega-Lite, we need to provide a URL and set the format
           "axis": {
             "grid": false
           },
-          "scale": {"zero": false}
+          //"scale": {"zero": false}
         },
     
          
@@ -580,12 +569,12 @@ To load the CSV file with Vega-Lite, we need to provide a URL and set the format
     "x": {"field": "GDP per person", "type": "quantitative", "axis": {
             "grid": true
           },
-          "scale": {"zero": false},
+        //  "scale": {"zero": false},
         },
     "y": {"field": "Death_rate", "type": "quantitative", "axis": {
             "grid": true
           },
-          "scale": {"zero": false},
+          //"scale": {"zero": false},
         },
     "color": {"field": "Country", "type": "nominal", 
     },
@@ -632,12 +621,12 @@ To load the CSV file with Vega-Lite, we need to provide a URL and set the format
     "x": {"field": "GDP per person", "type": "quantitative", "axis": {
             "grid": true
           },
-          "scale": {"zero": false},
+        //  "scale": {"zero": false},
         },
     "y": {"field": "Death_rate", "type": "quantitative", "axis": {
             "grid": true
           },
-          "scale": {"zero": false},
+         // "scale": {"zero": false},
         },
     "color": {"field": "Country", "type": "nominal", 
     },
